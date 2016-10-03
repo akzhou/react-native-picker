@@ -101,6 +101,7 @@ public class PickerViewModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void _init(ReadableMap options) {
+        curSelectedList.clear();
         Activity activity = getCurrentActivity();
         if (activity != null && options.hasKey(PICKER_DATA)) {
             view = activity.getLayoutInflater().inflate(R.layout.popup_picker_view, null);
